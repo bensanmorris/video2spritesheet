@@ -14,7 +14,7 @@ FRAMES_PER_ROW = 8
 PADDING_RATIO = 0.12
 
 PIXEL_SCALE = 0.25
-PALETTE_COLORS = 16
+PALETTE_COLORS = 32
 
 MOTION_THRESHOLD = 0.01  # alpha change to keep frame
 TARGET_FPS = 12           # target animation frame rate
