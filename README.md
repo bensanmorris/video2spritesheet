@@ -100,9 +100,6 @@ intermediate/<video_name>/
 
 ## Stage B — Post-processing & spritesheet generation
 
-NB. Stage B is safe to rerun multiple times.  
-Adjusting these parameters does **not** require re-running Stage A.
-
 Stage B:
 - Crops using Stage A metadata
 - Normalises to fixed sprite size
@@ -112,6 +109,9 @@ Stage B:
 - Builds spritesheets
 
 ### Stage B parameters (and defaults)
+
+*NB. Stage B is safe to rerun multiple times.*
+*Adjusting these parameters does **not** require re-running Stage A.*
 
 | Argument | Default | Description |
 |--------|---------|-------------|
