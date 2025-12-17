@@ -9,6 +9,19 @@ RVM_PATH = os.path.join(os.path.dirname(__file__), "RobustVideoMatting")
 sys.path.insert(0, RVM_PATH)
 from model import MattingNetwork
 
+import urllib.request
+
+MODEL_PATH = "rvm_resnet50.pth"
+MODEL_URL = (
+    "https://github.com/PeterL1n/RobustVideoMatting/"
+    "releases/download/v1.0.0/rvm_resnet50.pth"
+)
+
+if not os.path.exists(MODEL_PATH):
+    print("Downloading RVM model weights...")
+    urllib.request.urlretrieve(MODEL_URL, MODEL_PATH)
+    print("Download complete.")
+
 INPUT_DIR = "input"
 OUTPUT_DIR = "intermediate"
 ALPHA_THRESHOLD = 0.05
