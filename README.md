@@ -82,8 +82,9 @@ Stage A:
 
 ### Input
 
-Place MP4 videos in:
+**NB. A sample mp4 is already provided so you can go ahead and run and experiment.**
 
+Place MP4 videos in:
 ```
 input/
 ```
