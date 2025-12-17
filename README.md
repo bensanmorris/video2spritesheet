@@ -129,8 +129,34 @@ Stage B:
 
 ### Run Stage B
 
+(Windows)
+```cmd
+python stage_b_postprocess.py ^
+  --input-dir intermediate ^
+  --output-dir output_frames ^
+  --sprite-size 128 ^
+  --frames-per-row 8 ^
+  --padding-ratio 0.12 ^
+  --pixel-scale 0.25 ^
+  --palette-colors 32 ^
+  --motion-threshold 0.01 ^
+  --target-fps 12 ^
+  --max-frames 64
+```
+
+(Linux)
 ```bash
-python stage_b_postprocess.py
+python stage_b_postprocess.py \
+  --input-dir intermediate \
+  --output-dir output_frames \
+  --sprite-size 128 \
+  --frames-per-row 8 \
+  --padding-ratio 0.12 \
+  --pixel-scale 0.25 \
+  --palette-colors 32 \
+  --motion-threshold 0.01 \
+  --target-fps 12 \
+  --max-frames 64
 ```
 
 ### Output
