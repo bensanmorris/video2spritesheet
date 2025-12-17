@@ -3,6 +3,10 @@ import cv2
 import json
 import torch
 import numpy as np
+import sys
+
+RVM_PATH = os.path.join(os.path.dirname(__file__), "RobustVideoMatting")
+sys.path.insert(0, RVM_PATH)
 from model import MattingNetwork
 
 INPUT_DIR = "input"
