@@ -100,6 +100,9 @@ intermediate/<video_name>/
 
 ## Stage B — Post-processing & spritesheet generation
 
+NB. Stage B is safe to rerun multiple times.  
+Adjusting these parameters does **not** require re-running Stage A.
+
 Stage B:
 - Crops using Stage A metadata
 - Normalises to fixed sprite size
@@ -107,6 +110,22 @@ Stage B:
 - Supports target FPS + ping-pong safety
 - Applies pixel-art quantisation
 - Builds spritesheets
+
+### Stage B parameters (and defaults)
+
+| Argument | Default | Description |
+|--------|---------|-------------|
+| `--sprite-size` | `128` | Final width and height (in pixels) of each output sprite (square). |
+| `--frames-per-row` | `8` | Number of animation frames packed per row in the spritesheet. |
+| `--padding-ratio` | `0.12` | Extra padding added around detected bounds as a fraction of the sprite size. |
+| `--pixel-scale` | `0.25` | Downscale factor used before upscaling to create a pixel-art effect. |
+| `--palette-colors` | `32` | Maximum number of colours used for pixel-art colour quantisation. |
+| `--motion-threshold` | `0.01` | Minimum average alpha change required to keep a frame during motion filtering. |
+| `--target-fps` | `12` | Target animation frame rate after frame skipping (`0` disables FPS limiting). |
+| `--max-frames` | `64` | Hard upper limit on the number of frames included per animation. |
+| `--input-dir` | `intermediate` | Directory containing Stage A output folders. |
+| `--output-dir` | `output_frames` | Directory where spritesheets and processed frames are written. |
+
 
 ### Run Stage B
 
