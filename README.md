@@ -7,6 +7,8 @@ The pipeline is intentionally split so that:
 - **Stage A** (slow, GPU-heavy) performs high-quality person matting once
 - **Stage B** (fast, CPU-only) can be rerun many times to experiment with cropping, frame skipping, pixel-art quantisation, and spritesheet layout
 
+---
+
 ![spritesheet](output_frames/test/test_spritesheet.png)
 
 ---
